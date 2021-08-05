@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Override</title>
+<style>
+p{color:blue!important;}
+p{color:yellow;}
+p{color:red;}
+</style>
+
+<link type="text/css" rel="stylesheet" href="02_css_override.css"></link>
+</head>
+<body>
+<p>CSS가 중복 정의된 경우 어떤 스타일이 적용될것인가?</p>
+</body>
+</html>
+
+<!-- 내부 스타일이 먼저 올경우 내부는 무시되면 외부를 포함할수 없다 그러므로 외부로만 적용됨 -->
+
+<!-- p{color:blue!important;} --> 강제로 import하여 적용되도록 유도한다 -->
