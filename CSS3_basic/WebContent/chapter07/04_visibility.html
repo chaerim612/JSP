@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>visibility</title>
+ <style>
+  .v1{
+   visibility: hidden;
+   border: 1px dotted red;
+  }
+  
+  .v2{
+   visibility: visible;
+   border: 3px dotted red;
+  }
+  
+   .v3{
+   display: none;
+   border: 3px dotted red;
+  }
+  
+ </style>
+</head>
+<body>
+<div class="v1"> <img src="pic1.jpg"></div> <!-- 안보임 -->
+<div class="v2"> <img src="pic1.jpg"></div>
+<div class="v3"> <img src="pic1.jpg"></div><!-- 객체와 공간 사라짐 -->
+<div class="v2"> <img src="pic1.jpg"></div>
+</body>
+</html>

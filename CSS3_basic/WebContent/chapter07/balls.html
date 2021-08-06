@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+div {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: red;
+	animation-name: bounce;
+	animation-iteration-count: infinite;
+}
+
+#b1{
+	background: blue;
+	animation-direction:alternate;
+	animation-duration:1s;
+		
+}
+#b2{
+	background: yellow;
+	left:40px;
+	animation-direction:alternate;
+	animation-duration:2s;
+}
+#b3{
+	background: orange;
+	left:70px;
+	animation-direction:alternate;
+	animation-duration:4s;
+}
+#b4{
+	background: red;
+	left:100px;
+	animation-direction:alternate;
+	animation-duration:3s;
+}
+#b5{
+	background: black;
+	left:130px;
+	animation-direction:alternate;
+	animation-duration:1.1s;
+}
+
+
+
+@keyframes bounce {
+	from, to{bottom: 0px; animation-timing-function:ease-out;}
+	50%{bottom:300px; animation-timing-function:ease-in;}
+}
+
+</style>
+<body>
+	<div id="b1"></div>
+	<div id="b2"></div>
+	<div id="b3"></div>
+	<div id="b4"></div>
+	<div id="b5"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Animation</title>
+<style>
+div{
+			width: 100px;
+            height: 50px;
+            background: #ff8080;
+            position: relative;
+            animation: boxmove 3s  alternate;
+		}
+		
+		#box1{
+			animation-delay : 1s;
+			animation-timing-function:ease;
+		/* 	animation-direction:reverse; */
+			animation-iteration-count:3;
+		}
+		#box2{
+			animation-delay : 2s;
+			animation-timing-function:linear;
+			animation-iteration-count:4;
+		}
+		#box3{
+			animation-delay : 3s;
+			animation-timing-function:ease-in;
+			animation-iteration-count:3;
+		}
+		@keyframes boxmove{
+			from {left:0px;}
+			to{left:300px;}
+			
+			/* from {background-color:#ff8080;}
+			to{background-color:#ff5050;} */
+		}
+		
+		div:hover { 
+            animation-play-state: paused; /* 일시정지 */
+        }
+
+</style>
+</head>
+<body>
+	<div id="box1">애니메이션 박스 1</div>
+    <div id="box2">애니메이션 박스 2</div>
+    <div id="box3">애니메이션 박스 3</div>
+    <p><strong>참고: </strong>IE9 이하 혹은 낮은 버전에서 지원하지 않습니다.</p>
+</body>
+</html>
