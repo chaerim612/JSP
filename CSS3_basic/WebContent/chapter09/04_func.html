@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+ var printMsg=function(msg) { //무명함수 선언
+		document.write("무명함수:" + msg +"<br>");
+	} 
+function printMsg(msg) { //기본함수 선언
+		document.write("기본함수:" + msg +"<br>");
+	}
+	
+	printMsg("가 호출되었습니다."); //호출가능
+	
+</script>
+</body>
+</html>
