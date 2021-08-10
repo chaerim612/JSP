@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <script>
+	var dat;
+	var week=new Date().getDay(); //0(일요일) ~6(토요일)
+	switch(week){
+	case 0:
+		day="일요일"; break;
+	case 1:
+		day="월요일"; break;
+	case 2:
+		day="화요일"; break;
+	case 3:
+		day="수요일"; break;
+	case 4:
+		day="목요일"; break;
+	case 5:
+		day="금요일"; break;
+	case 6:
+		day="토요일"; break;
+	default:
+		day="없는 요일 입니다";
+	}
+	document.write("오늘은 <b>"+ day +"</b>입니다.<p/>")
+</script> -->
+ <script>
+        var text;
+        var day;
+        var week=new Date().getDay();    // 0(일요일)~6(토요일) 
+        switch(week) {
+            case 1:    // 월요일
+            case 2:    // 화요일
+            	day="월~화요일";
+                text="HTML5";
+                break;
+            case 3:    // 수요일
+            case 4:    // 목요일
+            	day="수~목요일";
+                text="자바스크립트";
+                break;
+            case 5:    // 금요일 
+	        case 6:    // 토요일
+	        	day="금~토요일";
+                text="JAVA";
+                break;
+            case 0:    //일요일
+	        default:
+                text="PYTHON";
+        }
+	    document.write("오늘은 " + day +"이며 <b>" +text + "</b> 학습하는 날입니다. <p/>");
+    </script>
+</body>
+
+
+</body>
+</html>
