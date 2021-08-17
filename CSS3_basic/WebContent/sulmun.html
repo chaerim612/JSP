@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var list=[
+		{
+			question: "당신이 가장 좋아하는 과일을 선택해주세요.",
+			options : ["사과","복숭아","귤","포도","딸기","참외","체리"]
+		},
+		{
+			question: "당신이 가장 좋아하는 음식을 선택해주세요.",
+			options : ["떡볶이","마라탕","삼겹살","훠궈","꿔바로우","양꼬치","곱창"]
+		},
+		{
+			question: "당신이 가장 좋아하는 동물을 선택해주세요.",
+			options : ["고양이","강아지","햄스터","쿼카","캥거루","코알라","물개"]
+		},
+	];
+	
+	console.log(list);
+	
+	for(var i=0;i<list.length;i++){
+		var questionMessage=list[i].question+'\n';
+		
+		for(var j=0;j<list[i].options.length;j++){
+			questionMessage+=(j+1)+' '+list[i].options[j]+'\n';
+		}
+		console.log(questionMessage);
+		list[i].answer=prompt(questionMessage);
+	}
+	
+	for(var i=0;list.length;i++){
+		var index=parseInt(list[i].answer);
+		list[i].question+'\n당신의 선택 : '+list[i].options[index-1];
+	}
+</script>
+</body>
+</html>
