@@ -36,7 +36,8 @@ public class CalcServlet extends HttpServlet {
 		op=request.getParameter("operator");
 		num2=Integer.parseInt(request.getParameter("num2"));
 		
-		result=calc(num1,num2,op);
+		Calc calc=new Calc(num1,num2,op);
+		result=calc.getResult();
 		
 		out.println("<HTML>");
 		out.println("<HEAD><TITLE>°è»ê±â</TITLE></HEAD>");
@@ -47,24 +48,7 @@ public class CalcServlet extends HttpServlet {
 		out.println("</CENTER></BODY></HTML>");
 	}
 	
-	public int calc(int num1, int num2, String op) {
-		int result=0;
-		
-		if(op.equals("+")){
-			result=num1+num2;
-		}
-		else if(op.equals("-")){
-			result=num1-num2;
-		}
-		else if(op.equals("*")){
-			result=num1*num2;
-		}
-		else if(op.equals("/")){
-			result=num1/num2;
-		}
-		
-		return result;
-	}
+	
 	
 
 }
