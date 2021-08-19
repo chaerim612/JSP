@@ -7,15 +7,26 @@
 <title>Scriptlet</title>
 </head>
 <body>
-<div align="center">
+<div align="center" >
 <h2>스크립트릿 테스트</h2>
 <hr />
 
+<%-- <%
+for(int i=1; i<=10;i++) {
+	out.println(i+"<br>");
+}
+%> --%>
+
 <%
-for(int i=0;i<10;i++){
-	out.print(i+"<br>");
+for(int i=1; i<=10;i++) {
+	
+%>
+      <%=i %><br>
+<%
 }
 %>
+
+
 </div>
 </body>
 </html>
