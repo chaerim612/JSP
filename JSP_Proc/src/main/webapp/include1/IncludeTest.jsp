@@ -35,7 +35,7 @@ if(camping==null){
   <!-- Left 부분 -->
  <tr height="500">
   <td align="center" width="250"> 
-  <jsp:include page="left.jsp"/> 
+  <jsp:include page="Left.jsp"/> 
   </td>
   
  <!-- Center 부분 -->
