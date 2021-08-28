@@ -1,73 +1,45 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%
-  request.setCharacterEncoding("UTF-8");
-  String username=request.getParameter("username");
-  
-  if(username != null){
-	session.setAttribute("user", username);  
-  }
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<% 
+request.setCharacterEncoding("UTF-8"); 
+String username=request.getParameter("username");
+
+if(username!=null){
+	session.setAttribute("user",username);
+}
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>twitter_list.jsp</title>
-
-	<style>
-		div{
-			margin:0px;
-			padding:1px;
-			background-color:#00BFFF;
-			text-align: center;
-			color:white;
-		}
-		h2,h5{
-			margin:0px;
-		}
-		div.div1{
-			text-align: left;
-		}
-	</style>
+<meta charset="UTF-8">
+<title>twitter_list</title>
 </head>
 <body>
-	<div>
-		<h2>My Simple Twitter</h2>
-		<hr width="70%" color="white" />
-		
-		<form action="tweet.jsp" method="post">
-			<strong><%= session.getAttribute("user") %></strong>&nbsp;
-			<input type="text" name="msg" placeholder="트윗을 남겨보세요." autofocus/>&nbsp;
-			<input type="submit" value="Tweet" >
-		</form>
-		<hr width="70%" color="white" />
-		<div class="div1">
-		<h5>&nbsp;&nbsp;트윗↓↓</h5>
-		<hr color="white" />
-		<UL>
-		<%
-		   /* application 내장객체를 통해서 ArrayList에 msgs라는 이름으로 객체생성하여 댓글 가져옴 */
+<div align=center>
+<h2>My Twitter</h2>
+<hr />
+<form action="tweet.jsp" method="post">
+	<%=session.getAttribute("user") %>
+	<input type="text" name="msg" placeholder="댓글을 입력하세요. "/>
+	<input type="submit" value="Tweet"/>
+</form>
+</div>
+<div align=left>
+<hr />
+	<ul>
+		<%	
+			/*application 내장 객체를 통해 Arraylist에 msg라는 이름으로 객체 생성을 하여 댓글을 가져옴*/
 			ArrayList<String> msgs=(ArrayList<String>)application.getAttribute("msgs");
-		
-		   //msgs가 null이 아닌 경우에만 목록 출력
-		   if(msgs != null){
-			   for(String msg:msgs){
-				   out.println("<LI>"+msg+"</LI>");
-			   }
-		   }
+			
+			//msgs가 null이 아닌 경우
+			if(msgs!=null){
+				for(String msg:msgs){
+					out.println("<li>"+msg+"</li><br>");
+				}
+			}
 		%>
-		</UL>
-		</div>		
-	</div>
+	</ul>
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

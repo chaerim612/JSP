@@ -1,27 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>left</title>
 </head>
 <body>
-	<table width="200">
-		<tr height="60">
-			<td width="200" align="center"><a href="SessionMain.jsp?center=Hiking.jsp" style="text-decoration:none">ķ�� ����ǰ</a></td>
-		</tr>
-				<tr height="60">
-			<td width="200" align="center"><a href="SessionMain.jsp?center=Car.jsp" style="text-decoration:none">ī���� �ڵ�����ǰ</a></td>
-		</tr>
-				<tr height="60">
-			<td width="200" align="center"><a href="SessionMain.jsp?center=Travel.jsp" style="text-decoration:none">���� ��ǰ</a></td>
-		</tr>
-				<tr height="60">
-			<td width="200" align="center"><a href="SessionMain.jsp?center=Optics.jsp" style="text-decoration:none">���к귣��</a></td>
-		</tr>
-	
-	
-	</table>
+<table width=200>
+<tr height=60>
+<td width=200 align=center><a href="#" style="text-decoration: none">캠핑/등산용품</a></td>
+</tr >
+<tr height=60>
+<td width=200 align=center><a href="#" style="text-decoration: none">카라반 물품</a></td>
+</tr >
+<tr height=60>
+<td width=200 align=center><a href="#" style="text-decoration: none">캠핑장 이용수칙</a></td>
+</tr >
+<tr height=60>
+<td width=200 align=center><a href="#" style="text-decoration: none">여행 코스 추천</a></td>
+</tr >
+<tr height=60>
+<td width=200 align=center><a href="#" style="text-decoration: none">오시는 길</a></td>
+</tr >
+</table>
 </body>
 </html>

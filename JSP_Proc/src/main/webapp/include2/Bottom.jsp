@@ -1,22 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<title>bottom</title>
+</head>
 <body>
-
-<center>
- <table width="800">
- <tr height="100">
-  <td align="center" width="800" > <font size="3" color="gray" ><b>
-   аж╪р : ╪╜©О ф╞╨╟╫ц а╬╥н╠╦ 101 435Bхё╫г<br>
-   х╦╩Г╦М : ╪ж╣╔╫╨е╘ д╥гн <br>
-   ц╔юсюз : ╪ж╣╔╫╨е╘<br>
-   CopyRight ╗о by 2020 KOVEA All rights reserved.    Design by PSDesign</b>
-  
-  
-  
-  </font></td>
- </tr>
-
+<table width="800">
+<tr height="100">
+<td align=center width="800">
+<font size="3" color="gray">
+<b>
+	Лё╪Л├▄ : Л└°Л ╦ М┼╧КЁ└Л▀° Л╒┘К║°Й╣╛ <br />
+	М ▄Л┌╛К╙┘ : Л├■К█╟Л┼╓М│╛<br />
+	Л╠┘Л·└Л·░ : Л├■К█╟Л┼╓М│╛ <br />
+</b>
+</font></td>
+</tr>
+</table>
 </body>
 </html>
