@@ -133,5 +133,51 @@ public class MemberDAO {
 		}
 		return bean;
 	}
+	//===========================================
+	//4. 한 사람에 대한 회원 정보를 수정하는 메소드
+	public String getPass(String id) {
+		String pw="";
+		
+		try {
+			getCon();
+			
+			String sql="select pw1 from member where id=?";
+			
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) {
+				pw=rs.getString(1);
+			}
+			con.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return pw;
+	}
+	
+	//5. 업데이트 메소드
+	public void updateMember(MemberDBBean bean) {
+		
+		try {
+			getCon();
+			
+			String sql="update member set email=?,phone=?,address=? where id=?";
+			pstmt=con.prepareStatement(sql);
+			
+			pstmt.setString(1, bean.getEmail());
+			pstmt.setString(2, bean.getPhone());
+			pstmt.setString(3, bean.getAddress());
+			pstmt.setString(4, bean.getId());
+			
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 
 }
