@@ -1,7 +1,6 @@
-package memberVO;
+package control;
 
-public class MemberBean {
-	
+public class MemberDBBean {
 	private String id;
 	private String pw1;
 	private String pw2;
@@ -13,7 +12,7 @@ public class MemberBean {
 	private String job;
 	private String age;
 	private String info;
-
+	
 	
 	public String getId() {
 		return id;
@@ -21,7 +20,6 @@ public class MemberBean {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 	public String getPw1() {
 		return pw1;
 	}
@@ -82,6 +80,5 @@ public class MemberBean {
 	public void setInfo(String info) {
 		this.info = info;
 	}
-
 
 }
