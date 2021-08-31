@@ -134,7 +134,7 @@ public class MemberDAO {
 		return bean;
 	}
 	//===========================================
-	//4. 한 사람에 대한 회원 정보를 수정하는 메소드
+	//4. 한 사람에 대한 회원 정보를 가져오는 메서드
 	public String getPass(String id) {
 		String pw="";
 		
@@ -158,7 +158,7 @@ public class MemberDAO {
 		return pw;
 	}
 	
-	//5. 업데이트 메소드
+	//5. 한 사람에 대한 회원 정보를 수정하는 메소드
 	public void updateMember(MemberDBBean bean) {
 		
 		try {
@@ -171,6 +171,7 @@ public class MemberDAO {
 			pstmt.setString(2, bean.getPhone());
 			pstmt.setString(3, bean.getAddress());
 			pstmt.setString(4, bean.getId());
+			pstmt.executeUpdate();
 			
 			con.close();
 			
@@ -178,6 +179,24 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 		
+	}
+	//=============================================
+	//6. 회원 정보 삭제
+	public void DeleteMember(String id) {
+		try {
+			getCon();
+			
+			String sql="delete from member where id=?";
+			pstmt=con.prepareStatement(sql);
+			
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+			
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
