@@ -11,4 +11,9 @@
     <param-name>propfile</param-name>
     <param-value>c:/tmp/my.conf</param-value>
   </context-param>
+  
+  <context-param>
+    <param-name>workspace</param-name>
+    <param-value>F:\Documents\jsp</param-value>
+  </context-param>
 </web-app>
